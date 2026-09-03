@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoavaliação do Colaborador • Projeto Crescer FACISC</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos Oficiais FACISC -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO INSTITUCIONAL -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-wrap" title="FACISC • Federação das Associações Empresariais de SC">
+                <!-- SVG Logo Oficial FACISC -->
+                <svg class="logo-svg" viewBox="0 0 145 26" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M130.243 4.61588C139.296 9.08423 141.653 16.0148 135.918 25.9138H144.898V16.0103C143.564 9.01389 138.263 4.73615 130.243 4.61588Z" fill="#FFFFFF"></path>
+                    <path d="M118.506 10.0873C128.098 -1.15056 139.101 1.42516 144.916 9.9534V0.183823H121.808C119.473 2.58253 118.378 5.88444 118.506 10.0873Z" fill="#FFFFFF"></path>
+                    <path d="M124.911 21.4794C115.859 17.0111 113.501 10.0805 119.236 0.181549H110.257V10.085C111.59 17.0814 116.892 21.3592 124.911 21.4794Z" fill="#FFFFFF"></path>
+                    <path d="M136.646 16.0103C127.054 27.2481 116.051 24.6724 110.236 16.1442V25.9138H133.344C135.68 23.5151 136.774 20.2131 136.646 16.0103Z" fill="#FFFFFF"></path>
+                    <path d="M0.0419922 0.633148V25.2216H5.15982V14.5897H14.1348V10.1213H5.15982V5.0652H14.1348V0.633148H0.0419922Z" fill="#FFFFFF"></path>
+                    <path d="M28.2392 15.8651L25.5586 7.92005C25.4812 7.6863 25.3839 7.28236 25.2645 6.71048C25.1451 6.1386 25.019 5.43964 24.8885 4.61133C24.747 5.4056 24.6098 6.12045 24.4793 6.7536C24.3489 7.38675 24.2515 7.80885 24.1852 8.02217L21.6019 15.8651H28.2392ZM13.0029 25.2216L22.1106 0.633148H27.9627L37.1987 25.2216H31.3798L29.4335 19.9976H20.1644L18.4967 25.2216H13.0051H13.0029Z" fill="#FFFFFF"></path>
+                    <path d="M64.5592 0.633148H59.4414V25.2216H64.5592V0.633148Z" fill="#FFFFFF"></path>
+                    <path d="M67.812 22.0967L70.6563 18.788C71.0168 19.6957 71.594 20.4106 72.388 20.9303C73.1842 21.4522 74.0777 21.7109 75.0686 21.7109C76.2673 21.7109 77.2161 21.4204 77.9128 20.8372C78.6095 20.2563 78.9589 19.4711 78.9589 18.4862C78.9589 17.322 77.7978 16.1623 75.4777 15.0095C74.7258 14.6396 74.1308 14.3378 73.6951 14.1018C71.6029 12.983 70.152 11.8869 69.3469 10.818C68.5397 9.74915 68.1372 8.47377 68.1372 6.99643C68.1372 4.96989 68.9179 3.30418 70.4815 1.99931C72.0452 0.694426 74.0755 0.0431213 76.5703 0.0431213C78.0189 0.0431213 79.2708 0.304097 80.3235 0.823779C81.3741 1.34573 82.303 2.16043 83.1102 3.26787L80.0869 6.24073C79.7286 5.52361 79.2509 4.98805 78.6581 4.6363C78.0632 4.28455 77.3466 4.10754 76.5084 4.10754C75.4932 4.10754 74.6771 4.36851 74.0556 4.88819C73.4341 5.41015 73.1245 6.08414 73.1245 6.91246C73.1245 8.2128 74.3564 9.39967 76.818 10.4731C77.309 10.6864 77.685 10.8543 77.946 10.9769C79.9741 11.93 81.4736 13.0034 82.4489 14.2016C83.4243 15.3998 83.9131 16.766 83.9131 18.3001C83.9131 20.608 83.1478 22.4462 81.6151 23.8169C80.0847 25.1876 78.0278 25.8752 75.4423 25.8752C73.6133 25.8752 72.043 25.5507 70.7337 24.8994C69.4266 24.2526 68.449 23.3154 67.8076 22.0944" fill="#FFFFFF"></path>
+                    <path d="M105.963 7.03046C104.928 6.07961 103.867 5.38291 102.776 4.94039C101.686 4.50013 100.521 4.27774 99.2776 4.27774C96.7275 4.27774 94.695 5.06066 93.18 6.62879C91.665 8.19691 90.9064 10.3029 90.9064 12.9444C90.9064 15.5859 91.6097 17.583 93.0163 19.1012C94.423 20.6194 96.3405 21.3773 98.7711 21.3773C100.156 21.3773 101.441 21.139 102.628 20.6625C103.816 20.1882 104.917 19.4733 105.93 18.5202L105.897 23.9122C104.807 24.5726 103.666 25.065 102.473 25.3895C101.279 25.7141 100.023 25.8775 98.7048 25.8775C94.8896 25.8775 91.7579 24.6588 89.3118 22.2238C86.8656 19.7888 85.6426 16.6956 85.6426 12.9444C85.6426 9.19316 86.8701 6.12045 89.3206 3.68997C91.7734 1.2595 94.9338 0.0431213 98.8021 0.0431213C100.098 0.0431213 101.352 0.183821 102.562 0.462952C103.772 0.744352 104.964 1.17553 106.143 1.75648L105.963 7.03046Z" fill="#FFFFFF"></path>
+                    <path d="M56.1146 7.03046C55.0795 6.07961 54.0179 5.38291 52.9276 4.94039C51.8372 4.50013 50.6717 4.27774 49.4287 4.27774C46.8786 4.27774 44.8461 5.06066 43.3311 6.62879C41.8161 8.19691 41.0597 10.3029 41.0597 12.9444C41.0597 15.5859 41.763 17.583 43.1696 19.1012C44.5763 20.6194 46.4938 21.3773 48.9244 21.3773C50.3089 21.3773 51.5939 21.139 52.7816 20.6625C53.9693 20.1882 55.0707 19.4733 56.0836 18.5202L56.0505 23.9122C54.9601 24.5726 53.8189 25.065 52.6268 25.3895C51.4325 25.7141 50.1785 25.8775 48.8581 25.8775C45.0429 25.8775 41.9112 24.6588 39.4651 22.2238C37.019 19.7888 35.7959 16.6956 35.7959 12.9444C35.7959 9.19316 37.0212 6.12045 39.4739 3.68997C41.9245 1.2595 45.085 0.0431213 48.9532 0.0431213C50.2492 0.0431213 51.5033 0.183821 52.713 0.462952C53.9228 0.744352 55.1149 1.17553 56.2938 1.75648L56.1146 7.03046Z" fill="#FFFFFF"></path>
+                    <path d="M136.655 13.0488C136.655 13.0488 134.251 6.50398 127.58 5.04251H127.572C120.914 6.50171 118.508 13.0193 118.497 13.0488C118.508 13.0783 120.914 19.5982 127.572 21.0551H127.58C134.253 19.5936 136.655 13.0488 136.655 13.0488Z" fill="#FFFFFF"></path>
+                </svg>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Início</a>
+                <a href="formulario.html" class="nav-link active">📝 Autoavaliação</a>
+                <a href="quiz.html" class="nav-link">🎮 Quiz Interativo</a>
+            </nav>
+
+            <div class="header-badge">✦ Projeto Crescer • PDI</div>
+        </div>
+    </header>
+
+    <!-- CABEÇALHO EXCLUSIVO DE IMPRESSÃO (PDF OFICIAL) -->
+    <div class="print-header-facisc print-only">
+        <div>
+            <h2 style="color: #08763C; margin: 0; font-size: 18pt;">FACISC • PROJETO CRESCER</h2>
+            <p style="margin: 0; font-size: 11pt; color: #555;">Formulário Oficial de Autoavaliação do Colaborador (PDI)</p>
+        </div>
+        <div style="text-align: right; font-size: 9pt; color: #666;">
+            Federação das Associações Empresariais de Santa Catarina
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- BANNER TOPO -->
+        <section class="hero-banner no-print">
+            <div class="hero-tag">PLANO PRÁTICO • ETAPA 01</div>
+            <h1 class="hero-title">Autoavaliação do Colaborador</h1>
+            <p class="hero-subtitle">
+                Reflita com sinceridade sobre os seus 4 quadrantes de desenvolvimento e envie os dados para a planilha da liderança. Você também pode gerar o PDF oficial formatado para a reunião 1:1.
+            </p>
+        </section>
+
+        <!-- CARD 1: IDENTIFICAÇÃO -->
+        <section class="card">
+            <div class="card-header no-print">
+                <div class="card-icon">👤</div>
+                <div>
+                    <div class="card-title">1. Identificação do Colaborador</div>
+                    <div class="card-desc">Dados essenciais para formalização do ciclo de PDI</div>
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="colab_nome">Nome Completo do Colaborador *</label>
+                    <input type="text" id="colab_nome" class="form-input" placeholder="Ex: Maria Silva" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="colab_cargo">Cargo / Área de Atuação *</label>
+                    <input type="text" id="colab_cargo" class="form-input" placeholder="Ex: Analista de Projetos • Regional Vale" required>
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="colab_gestor">Nome do Gestor / Líder Direto</label>
+                    <input type="text" id="colab_gestor" class="form-input" placeholder="Ex: João Souza">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="colab_data">Data da Autoavaliação</label>
+                    <input type="date" id="colab_data" class="form-input">
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD 2: OS 4 QUADRANTES -->
+        <section class="card">
+            <div class="card-header no-print">
+                <div class="card-icon blue">🎯</div>
+                <div>
+                    <div class="card-title">2. Os 4 Quadrantes do Desenvolvimento</div>
+                    <div class="card-desc">Mapeamento de competências, metas e suporte institucional</div>
+                </div>
+            </div>
+
+            <!-- Quadrante 1 -->
+            <div class="quadrant-box">
+                <div class="quadrant-title">1. PONTOS FORTES — O que você faz de melhor?</div>
+                <div class="form-helper">Identifique competências técnicas e comportamentais onde você gera grande impacto (Ex: Resolução de problemas, comunicação clara, análise técnica, foco em prazos).</div>
+                <textarea id="colab_fortes" class="form-textarea" placeholder="Descreva seus principais pontos fortes e momentos em que você se destacou na FACISC..."></textarea>
+            </div>
+
+            <!-- Quadrante 2 -->
+            <div class="quadrant-box blue-theme">
+                <div class="quadrant-title" style="color: var(--blue-corp);">2. OPORTUNIDADES — O que precisa ser aprimorado?</div>
+                <div class="form-helper">Habilidades ou conhecimentos que você quer e precisa desenvolver (Ex: Gestão do tempo, domínio de novas ferramentas, oratória/apresentações, visão estratégica).</div>
+                <textarea id="colab_oportunidades" class="form-textarea" placeholder="Descreva os conhecimentos ou atitudes que você deseja aperfeiçoar..."></textarea>
+            </div>
+
+            <!-- Quadrante 3 -->
+            <div class="quadrant-box">
+                <div class="quadrant-title">3. METAS DE CARREIRA (SMART) — Onde quer chegar nos próximos 12 meses?</div>
+                <div class="form-helper">Objetivos concretos, específicos e com prazo estabelecido (Ex: Assumir liderança técnica do projeto X até Dezembro; Concluir certificação Y no 1º semestre).</div>
+                <textarea id="colab_metas" class="form-textarea" placeholder="Escreva de 1 a 3 metas SMART para o seu plano anual..."></textarea>
+            </div>
+
+            <!-- Quadrante 4 -->
+            <div class="quadrant-box blue-theme">
+                <div class="quadrant-title" style="color: var(--blue-corp);">4. RECURSOS E APOIO — De qual suporte você necessita?</div>
+                <div class="form-helper">Selecione os apoios desejados e detalhe o que a liderança e a FACISC podem fornecer para viabilizar suas metas:</div>
+                
+                <div class="checkbox-group no-print">
+                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Cursos / Treinamentos"> 🎓 Cursos e Treinamentos</label>
+                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Mentoria Interna"> 🤝 Mentoria Interna</label>
+                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Tempo para Estudos"> ⏱️ Horas Semanais de Estudo</label>
+                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Novos Projetos"> 🚀 Participação em Novos Projetos</label>
+                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Ferramentas / Softwares"> 💻 Novas Ferramentas</label>
+                </div>
+
+                <textarea id="colab_recursos" class="form-textarea" placeholder="Especifique detalhadamente os apoios e recursos necessários para o seu plano..."></textarea>
+            </div>
+
+            <!-- Assinaturas para Impressão (PDF) -->
+            <div class="print-signatures print-only">
+                <div class="sign-line">
+                    <strong>Assinatura do Colaborador</strong><br>
+                    <span id="print_sign_colab">Nome do Colaborador</span>
+                </div>
+                <div class="sign-line">
+                    <strong>Assinatura do Gestor</strong><br>
+                    <span id="print_sign_gestor">Nome do Gestor</span>
+                </div>
+            </div>
+
+            <!-- BARRA DE AÇÕES -->
+            <div class="actions-bar no-print">
+                <button id="btn-enviar-form" class="btn btn-primary" onclick="submeterFormulario()">
+                    <span>🚀</span> Enviar Autoavaliação
+                </button>
+                <button class="btn btn-secondary" onclick="exportToPDF()">
+                    <span>📄</span> Gerar / Salvar PDF Oficial
+                </button>
+                <button class="btn btn-outline" onclick="copyStructuredSummary()">
+                    <span>📋</span> Copiar p/ Teams / E-mail
+                </button>
+                <button class="btn btn-outline" onclick="downloadCSV()">
+                    <span>💾</span> Baixar CSV / Excel
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer class="no-print">
+        <div class="footer-container">
+            <div>
+                <strong>FACISC</strong> • Federação das Associações Empresariais de Santa Catarina
+            </div>
+            <div>
+                <a href="quiz.html" class="footer-link">Ir para o Quiz Interativo →</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script>
+        const formFields = ['colab_nome', 'colab_cargo', 'colab_gestor', 'colab_data', 'colab_fortes', 'colab_oportunidades', 'colab_metas', 'colab_recursos'];
+
+        // Auto-salvamento em localStorage
+        function saveFormData() {
+            const data = {};
+            formFields.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) data[id] = el.value;
+            });
+            const checkboxes = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value);
+            data['apoios_selecionados'] = checkboxes;
+            localStorage.setItem('facisc_pdi_draft', JSON.stringify(data));
+        }
+
+        function loadFormData() {
+            // Data padrão: hoje
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('colab_data').value = today;
+
+            const saved = localStorage.getItem('facisc_pdi_draft');
+            if (!saved) return;
+
+            try {
+                const data = JSON.parse(saved);
+                formFields.forEach(id => {
+                    if (data[id]) document.getElementById(id).value = data[id];
+                });
+                if (data['apoios_selecionados']) {
+                    document.querySelectorAll('input[name="apoio"]').forEach(cb => {
+                        cb.checked = data['apoios_selecionados'].includes(cb.value);
+                    });
+                }
+            } catch(e) {}
+        }
+
+        // Submeter Autoavaliação
+        async function submeterFormulario() {
+            const nome = document.getElementById('colab_nome').value.trim();
+            const cargo = document.getElementById('colab_cargo').value.trim();
+
+            if (!nome || !cargo) {
+                showToast("Por favor, preencha seu Nome Completo e Cargo / Área.", "warning");
+                document.getElementById(!nome ? 'colab_nome' : 'colab_cargo').focus();
+                return;
+            }
+
+            const btn = document.getElementById('btn-enviar-form');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = `<span>⏳</span> Enviando dados...`;
+
+            const dados = {
+                colaborador: nome,
+                cargo: cargo,
+                gestor: document.getElementById('colab_gestor').value.trim(),
+                data: document.getElementById('colab_data').value,
+                pontos_fortes: document.getElementById('colab_fortes').value.trim(),
+                oportunidades: document.getElementById('colab_oportunidades').value.trim(),
+                metas: document.getElementById('colab_metas').value.trim(),
+                apoios: Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value),
+                recursos: document.getElementById('colab_recursos').value.trim()
+            };
+
+            const resultado = await ApiService.enviarAutoavaliacao(dados);
+
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+
+            showToast(resultado.mensagem, resultado.localOnly ? "warning" : "success");
+        }
+
+        // Exportação em PDF Oficial
+        function exportToPDF() {
+            const nome = document.getElementById('colab_nome').value.trim() || "Colaborador";
+            const gestor = document.getElementById('colab_gestor').value.trim() || "Gestor Direto";
+            
+            document.getElementById('print_sign_colab').innerText = nome;
+            document.getElementById('print_sign_gestor').innerText = gestor;
+
+            window.print();
+        }
+
+        // Copiar Resumo Estruturado para Teams / E-mail
+        function copyStructuredSummary() {
+            const nome = document.getElementById('colab_nome').value.trim() || "Não informado";
+            const cargo = document.getElementById('colab_cargo').value.trim() || "Não informado";
+            const gestor = document.getElementById('colab_gestor').value.trim() || "Não informado";
+            const data = document.getElementById('colab_data').value || "Não informado";
+            const fortes = document.getElementById('colab_fortes').value.trim() || "Não preenchido";
+            const oportunidades = document.getElementById('colab_oportunidades').value.trim() || "Não preenchido";
+            const metas = document.getElementById('colab_metas').value.trim() || "Não preenchido";
+            const recursos = document.getElementById('colab_recursos').value.trim() || "Não preenchido";
+            
+            const apoios = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => `• ${cb.value}`).join('\n') || "Nenhum selecionado";
+
+            const summary = `📌 *PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI) • FACISC*
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 *Colaborador:* ${nome}
+💼 *Cargo/Área:* ${cargo}
+🤝 *Gestor:* ${gestor}
+📅 *Data:* ${data}
+
+🎯 *1. PONTOS FORTES:*
+${fortes}
+
+🚀 *2. OPORTUNIDADES DE DESENVOLVIMENTO:*
+${oportunidades}
+
+🏆 *3. METAS DE CARREIRA (12 MESES):*
+${metas}
+
+🤝 *4. RECURSOS E APOIO NECESSÁRIO:*
+${apoios}
+${recursos}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+_Material preenchido para alinhamento na Reunião 1:1 do Projeto Crescer._`;
+
+            navigator.clipboard.writeText(summary).then(() => {
+                showToast("✓ Resumo copiado com sucesso! Pronto para colar no Teams ou e-mail.", "success");
+            }).catch(() => {
+                showToast("✕ Erro ao copiar automaticamente. Selecione o texto na tela.", "error");
+            });
+        }
+
+        // Exportar CSV
+        function downloadCSV() {
+            const nome = document.getElementById('colab_nome').value.trim() || "Colaborador";
+            const cargo = document.getElementById('colab_cargo').value.trim();
+            const gestor = document.getElementById('colab_gestor').value.trim();
+            const data = document.getElementById('colab_data').value;
+            const fortes = document.getElementById('colab_fortes').value.replace(/"/g, '""');
+            const oportunidades = document.getElementById('colab_oportunidades').value.replace(/"/g, '""');
+            const metas = document.getElementById('colab_metas').value.replace(/"/g, '""');
+            const recursos = document.getElementById('colab_recursos').value.replace(/"/g, '""');
+            const apoios = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value).join('; ');
+
+            const csvContent = "\uFEFFNome,Cargo,Gestor,Data,Pontos Fortes,Oportunidades,Metas SMART,Apoios Selecionados,Recursos e Detalhes\n" +
+                `"${nome}","${cargo}","${gestor}","${data}","${fortes}","${oportunidades}","${metas}","${apoios}","${recursos}"\n`;
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", `PDI_FACISC_${nome.replace(/\s+/g, '_')}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast("✓ Arquivo CSV exportado com sucesso!", "success");
+        }
+
+        // Listeners
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFormData();
+            formFields.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('input', saveFormData);
+            });
+            document.querySelectorAll('input[name="apoio"]').forEach(cb => cb.addEventListener('change', saveFormData));
+        });
+    </script>
+</body>
+</html>

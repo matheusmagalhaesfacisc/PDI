@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Conhecimento • Quiz do PDI FACISC</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Estilos Oficiais FACISC -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO INSTITUCIONAL -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-wrap" title="FACISC • Federação das Associações Empresariais de SC">
+                <!-- SVG Logo Oficial FACISC -->
+                <svg class="logo-svg" viewBox="0 0 145 26" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M130.243 4.61588C139.296 9.08423 141.653 16.0148 135.918 25.9138H144.898V16.0103C143.564 9.01389 138.263 4.73615 130.243 4.61588Z" fill="#FFFFFF"></path>
+                    <path d="M118.506 10.0873C128.098 -1.15056 139.101 1.42516 144.916 9.9534V0.183823H121.808C119.473 2.58253 118.378 5.88444 118.506 10.0873Z" fill="#FFFFFF"></path>
+                    <path d="M124.911 21.4794C115.859 17.0111 113.501 10.0805 119.236 0.181549H110.257V10.085C111.59 17.0814 116.892 21.3592 124.911 21.4794Z" fill="#FFFFFF"></path>
+                    <path d="M136.646 16.0103C127.054 27.2481 116.051 24.6724 110.236 16.1442V25.9138H133.344C135.68 23.5151 136.774 20.2131 136.646 16.0103Z" fill="#FFFFFF"></path>
+                    <path d="M0.0419922 0.633148V25.2216H5.15982V14.5897H14.1348V10.1213H5.15982V5.0652H14.1348V0.633148H0.0419922Z" fill="#FFFFFF"></path>
+                    <path d="M28.2392 15.8651L25.5586 7.92005C25.4812 7.6863 25.3839 7.28236 25.2645 6.71048C25.1451 6.1386 25.019 5.43964 24.8885 4.61133C24.747 5.4056 24.6098 6.12045 24.4793 6.7536C24.3489 7.38675 24.2515 7.80885 24.1852 8.02217L21.6019 15.8651H28.2392ZM13.0029 25.2216L22.1106 0.633148H27.9627L37.1987 25.2216H31.3798L29.4335 19.9976H20.1644L18.4967 25.2216H13.0051H13.0029Z" fill="#FFFFFF"></path>
+                    <path d="M64.5592 0.633148H59.4414V25.2216H64.5592V0.633148Z" fill="#FFFFFF"></path>
+                    <path d="M67.812 22.0967L70.6563 18.788C71.0168 19.6957 71.594 20.4106 72.388 20.9303C73.1842 21.4522 74.0777 21.7109 75.0686 21.7109C76.2673 21.7109 77.2161 21.4204 77.9128 20.8372C78.6095 20.2563 78.9589 19.4711 78.9589 18.4862C78.9589 17.322 77.7978 16.1623 75.4777 15.0095C74.7258 14.6396 74.1308 14.3378 73.6951 14.1018C71.6029 12.983 70.152 11.8869 69.3469 10.818C68.5397 9.74915 68.1372 8.47377 68.1372 6.99643C68.1372 4.96989 68.9179 3.30418 70.4815 1.99931C72.0452 0.694426 74.0755 0.0431213 76.5703 0.0431213C78.0189 0.0431213 79.2708 0.304097 80.3235 0.823779C81.3741 1.34573 82.303 2.16043 83.1102 3.26787L80.0869 6.24073C79.7286 5.52361 79.2509 4.98805 78.6581 4.6363C78.0632 4.28455 77.3466 4.10754 76.5084 4.10754C75.4932 4.10754 74.6771 4.36851 74.0556 4.88819C73.4341 5.41015 73.1245 6.08414 73.1245 6.91246C73.1245 8.2128 74.3564 9.39967 76.818 10.4731C77.309 10.6864 77.685 10.8543 77.946 10.9769C79.9741 11.93 81.4736 13.0034 82.4489 14.2016C83.4243 15.3998 83.9131 16.766 83.9131 18.3001C83.9131 20.608 83.1478 22.4462 81.6151 23.8169C80.0847 25.1876 78.0278 25.8752 75.4423 25.8752C73.6133 25.8752 72.043 25.5507 70.7337 24.8994C69.4266 24.2526 68.449 23.3154 67.8076 22.0944" fill="#FFFFFF"></path>
+                    <path d="M105.963 7.03046C104.928 6.07961 103.867 5.38291 102.776 4.94039C101.686 4.50013 100.521 4.27774 99.2776 4.27774C96.7275 4.27774 94.695 5.06066 93.18 6.62879C91.665 8.19691 90.9064 10.3029 90.9064 12.9444C90.9064 15.5859 91.6097 17.583 93.0163 19.1012C94.423 20.6194 96.3405 21.3773 98.7711 21.3773C100.156 21.3773 101.441 21.139 102.628 20.6625C103.816 20.1882 104.917 19.4733 105.93 18.5202L105.897 23.9122C104.807 24.5726 103.666 25.065 102.473 25.3895C101.279 25.7141 100.023 25.8775 98.7048 25.8775C94.8896 25.8775 91.7579 24.6588 89.3118 22.2238C86.8656 19.7888 85.6426 16.6956 85.6426 12.9444C85.6426 9.19316 86.8701 6.12045 89.3206 3.68997C91.7734 1.2595 94.9338 0.0431213 98.8021 0.0431213C100.098 0.0431213 101.352 0.183821 102.562 0.462952C103.772 0.744352 104.964 1.17553 106.143 1.75648L105.963 7.03046Z" fill="#FFFFFF"></path>
+                    <path d="M56.1146 7.03046C55.0795 6.07961 54.0179 5.38291 52.9276 4.94039C51.8372 4.50013 50.6717 4.27774 49.4287 4.27774C46.8786 4.27774 44.8461 5.06066 43.3311 6.62879C41.8161 8.19691 41.0597 10.3029 41.0597 12.9444C41.0597 15.5859 41.763 17.583 43.1696 19.1012C44.5763 20.6194 46.4938 21.3773 48.9244 21.3773C50.3089 21.3773 51.5939 21.139 52.7816 20.6625C53.9693 20.1882 55.0707 19.4733 56.0836 18.5202L56.0505 23.9122C54.9601 24.5726 53.8189 25.065 52.6268 25.3895C51.4325 25.7141 50.1785 25.8775 48.8581 25.8775C45.0429 25.8775 41.9112 24.6588 39.4651 22.2238C37.019 19.7888 35.7959 16.6956 35.7959 12.9444C35.7959 9.19316 37.0212 6.12045 39.4739 3.68997C41.9245 1.2595 45.085 0.0431213 48.9532 0.0431213C50.2492 0.0431213 51.5033 0.183821 52.713 0.462952C53.9228 0.744352 55.1149 1.17553 56.2938 1.75648L56.1146 7.03046Z" fill="#FFFFFF"></path>
+                    <path d="M136.655 13.0488C136.655 13.0488 134.251 6.50398 127.58 5.04251H127.572C120.914 6.50171 118.508 13.0193 118.497 13.0488C118.508 13.0783 120.914 19.5982 127.572 21.0551H127.58C134.253 19.5936 136.655 13.0488 136.655 13.0488Z" fill="#FFFFFF"></path>
+                </svg>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Início</a>
+                <a href="formulario.html" class="nav-link">📝 Autoavaliação</a>
+                <a href="quiz.html" class="nav-link active">🎮 Quiz Interativo</a>
+            </nav>
+
+            <div class="header-badge">✦ Desafio do Conhecimento</div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- BANNER TOPO -->
+        <section class="hero-banner">
+            <div class="hero-tag">DINÂMICA AO VIVO • QUIZ DO PDI</div>
+            <h1 class="hero-title">Desafio do Conhecimento: Projeto Crescer</h1>
+            <p class="hero-subtitle">
+                Responda às 5 perguntas sobre Plano de Desenvolvimento Individual e descubra seu nível de protagonismo na carreira. Sua pontuação é gravada na planilha oficial do RH!
+            </p>
+        </section>
+
+        <!-- ETAPA 0: IDENTIFICAÇÃO DO PARTICIPANTE -->
+        <section id="quiz-intro-card" class="card">
+            <div class="card-header">
+                <div class="card-icon">👤</div>
+                <div>
+                    <div class="card-title">Identificação do Participante</div>
+                    <div class="card-desc">Informe seus dados para registrar sua pontuação no ranking do Projeto Crescer</div>
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="quiz_participante_nome">Seu Nome Completo *</label>
+                    <input type="text" id="quiz_participante_nome" class="form-input" placeholder="Ex: Carlos Eduardo" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="quiz_participante_cargo">Cargo / Área de Atuação *</label>
+                    <input type="text" id="quiz_participante_cargo" class="form-input" placeholder="Ex: Coordenador de Soluções" required>
+                </div>
+            </div>
+
+            <div style="margin-top: 0.5rem; display: flex; justify-content: flex-end;">
+                <button class="btn btn-primary" onclick="iniciarQuiz()">
+                    Começar o Desafio 🚀
+                </button>
+            </div>
+        </section>
+
+        <!-- ETAPA 1 A 5: PERGUNTAS DO QUIZ -->
+        <section id="quiz-container" style="display: none;">
+            <!-- Progresso -->
+            <div class="quiz-progress-wrap">
+                <div class="quiz-progress-meta">
+                    <span id="quiz-step-text">Pergunta 1 de 5</span>
+                    <span id="quiz-score-text">Acertos: 0</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Pergunta Atual -->
+            <div class="question-card">
+                <div id="q-category" class="question-number">Pergunta 1</div>
+                <h2 id="q-text" class="question-text">Pergunta...</h2>
+                <div id="q-options" class="options-list">
+                    <!-- Opções geradas via JS -->
+                </div>
+                <div id="q-feedback" class="feedback-box">
+                    <!-- Feedback gerado via JS -->
+                </div>
+                <div class="quiz-actions">
+                    <button id="btn-next-question" class="btn btn-primary" style="display: none;" onclick="nextQuestion()">
+                        Próxima Pergunta →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA FINAL: RESULTADO DO QUIZ -->
+        <section id="quiz-result" class="card quiz-result-card" style="display: none;">
+            <div class="score-circle">
+                <div id="final-score" class="score-number">5/5</div>
+                <div class="score-label">Pontuação</div>
+            </div>
+            <div id="result-badge" class="result-badge">🏆 Especialista em PDI FACISC</div>
+            <h2 id="result-title" class="hero-title" style="color: var(--dark-green); margin-bottom: 0.5rem;">Parabéns pelo Desempenho!</h2>
+            <p id="result-desc" class="card-desc" style="max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 1rem;">
+                Você compreendeu perfeitamente as etapas do PDI e o papel fundamental de protagonizar a sua própria trajetória na FACISC.
+            </p>
+
+            <div id="sync-status" style="margin-bottom: 1.8rem; font-size: 0.9rem; color: var(--facisc-green); font-weight: 600;">
+                <span>⏳ Gravando sua pontuação na planilha oficial...</span>
+            </div>
+
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-secondary" onclick="restartQuiz()">🔄 Refazer Quiz</button>
+                <a href="formulario.html" class="btn btn-primary">📝 Ir para Autoavaliação →</a>
+                <a href="index.html" class="btn btn-outline">🏠 Voltar ao Portal</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <strong>FACISC</strong> • Federação das Associações Empresariais de Santa Catarina
+            </div>
+            <div>
+                Projeto Crescer • Gestão de Pessoas & Cultura
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script>
+        // Dados oficiais do Quiz (do documento Dinâmica - Quiz.docx)
+        const quizQuestions = [
+            {
+                number: 1,
+                category: "PROTAGONISMO NO PDI",
+                question: "Qual é a principal responsabilidade do colaborador no processo do Plano de Desenvolvimento Individual (PDI)?",
+                options: [
+                    { letter: "A", text: "Aguardar o gestor definir todas as suas metas." },
+                    { letter: "B", text: "Delegar ao RH a escolha dos seus cursos e prazos." },
+                    { letter: "C", text: "Realizar reuniões de alinhamento apenas no final do ano." },
+                    { letter: "D", text: "Protagonizar e executar o plano ativamente." }
+                ],
+                correctIndex: 3, // D
+                explanation: "Exato! O PDI é de propriedade do colaborador. Embora a liderança dê suporte e mentoria, é você quem protagoniza e executa suas ações de desenvolvimento."
+            },
+            {
+                number: 2,
+                category: "CICLO DO PROCESSO",
+                question: "Quais são as 4 etapas essenciais do ciclo do PDI?",
+                options: [
+                    { letter: "A", text: "Autoavaliação, Alinhamento 1:1, Metas SMART e Acompanhamento." },
+                    { letter: "B", text: "Simplicidade, Metas SMART, Cobrança e Finalização." },
+                    { letter: "C", text: "Sustentabilidade, Autoavaliação, Alinhamento 1:1 e Reajuste." },
+                    { letter: "D", text: "Sistemática, Treinamento, Reunião de Área e Feedback." }
+                ],
+                correctIndex: 0, // A
+                explanation: "Correto! O fluxo contínuo do PDI é: 1. Autoavaliação → 2. Reunião 1:1 com líder → 3. Definição de Metas SMART → 4. Acompanhamento periódico."
+            },
+            {
+                number: 3,
+                category: "GESTÃO DE CARREIRA",
+                question: "O que caracteriza a prática de networking estratégico na gestão de carreira?",
+                options: [
+                    { letter: "A", text: "Adicionar pessoas de uma mesma empresa sem interação." },
+                    { letter: "B", text: "Construir relações autênticas, de confiança e suporte mútuo." },
+                    { letter: "C", text: "Colecionar contatos apenas para pedir favores quando precisar." },
+                    { letter: "D", text: "Trocar de cargo com frequência para conhecer novas áreas." }
+                ],
+                correctIndex: 1, // B
+                explanation: "Perfeito! Networking verdadeiro não é sobre quantidade de contatos vazios, mas sobre cultivar relações autênticas e de colaboração mútua no ecossistema FACISC."
+            },
+            {
+                number: 4,
+                category: "DESENVOLVIMENTO CONTÍNUO",
+                question: "Qual das alternativas reflete a mentalidade ideal para o desenvolvimento profissional contínuo?",
+                options: [
+                    { letter: "A", text: "Fazer apenas os treinamentos obrigatórios exigidos pela empresa." },
+                    { letter: "B", text: "Concluir a graduação e considerar os estudos finalizados." },
+                    { letter: "C", text: "Buscar aprender apenas quando houver promessa de promoção imediata." },
+                    { letter: "D", text: "Buscar aprendizado contínuo, constante e autodirigido (Lifelong Learning)." }
+                ],
+                correctIndex: 3, // D
+                explanation: "Excelente! O desenvolvimento é um processo contínuo ao longo de toda a vida profissional (Lifelong Learning), expandindo horizontes e gerando valor constante."
+            },
+            {
+                number: 5,
+                category: "COMPETÊNCIAS PROFISSIONAIS",
+                question: "O que diferencia as competências técnicas (Hard Skills) das competências comportamentais (Soft Skills)?",
+                options: [
+                    { letter: "A", text: "Técnicas são avaliadas no PDI; comportamentais não entram no plano." },
+                    { letter: "B", text: "Técnicas servem para líderes; comportamentais servem apenas para analistas." },
+                    { letter: "C", text: "Técnicas são ligadas a conhecimentos mensuráveis e operacionais; comportamentais referem-se a atitudes e relações interpessoais." },
+                    { letter: "D", text: "Técnicas são fáceis de esquecer; comportamentais mudam diariamente." }
+                ],
+                correctIndex: 2, // C
+                explanation: "Muito bem! Hard skills são os conhecimentos técnicos específicos (ex: Excel, gestão financeira, processos), enquanto Soft skills são atitudes, inteligência emocional e comunicação assertiva."
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let score = 0;
+        let answered = false;
+        let userAnswers = [];
+        let participanteNome = "";
+        let participanteCargo = "";
+
+        // Inicialização
+        window.addEventListener('DOMContentLoaded', () => {
+            // Recupera nome e cargo se já preencheu na autoavaliação
+            const draft = localStorage.getItem('facisc_pdi_draft');
+            if (draft) {
+                try {
+                    const data = JSON.parse(draft);
+                    if (data.colab_nome) document.getElementById('quiz_participante_nome').value = data.colab_nome;
+                    if (data.colab_cargo) document.getElementById('quiz_participante_cargo').value = data.colab_cargo;
+                } catch(e) {}
+            }
+        });
+
+        function iniciarQuiz() {
+            const nomeInput = document.getElementById('quiz_participante_nome').value.trim();
+            const cargoInput = document.getElementById('quiz_participante_cargo').value.trim();
+
+            if (!nomeInput || !cargoInput) {
+                showToast("Por favor, preencha seu Nome e Cargo / Área para iniciar.", "warning");
+                document.getElementById(!nomeInput ? 'quiz_participante_nome' : 'quiz_participante_cargo').focus();
+                return;
+            }
+
+            participanteNome = nomeInput;
+            participanteCargo = cargoInput;
+
+            document.getElementById('quiz-intro-card').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+
+            currentQuestionIdx = 0;
+            score = 0;
+            userAnswers = [];
+            loadQuestion(0);
+        }
+
+        function loadQuestion(idx) {
+            const q = quizQuestions[idx];
+            answered = false;
+
+            document.getElementById('q-category').innerText = `ETAPA ${idx + 1} • ${q.category}`;
+            document.getElementById('q-text').innerText = q.question;
+            document.getElementById('quiz-step-text').innerText = `Pergunta ${idx + 1} de ${quizQuestions.length}`;
+            document.getElementById('quiz-score-text').innerText = `Acertos: ${score}`;
+            document.getElementById('quiz-progress-fill').style.width = `${((idx) / quizQuestions.length) * 100}%`;
+
+            const optionsContainer = document.getElementById('q-options');
+            optionsContainer.innerHTML = '';
+
+            const feedback = document.getElementById('q-feedback');
+            feedback.style.display = 'none';
+            feedback.className = 'feedback-box';
+
+            document.getElementById('btn-next-question').style.display = 'none';
+
+            q.options.forEach((opt, oIdx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `<span class="option-letter">${opt.letter}</span> <span>${opt.text}</span>`;
+                btn.onclick = () => selectOption(oIdx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(selectedIdx) {
+            if (answered) return;
+            answered = true;
+
+            const q = quizQuestions[currentQuestionIdx];
+            const buttons = document.querySelectorAll('.option-btn');
+            const feedback = document.getElementById('q-feedback');
+            const isCorrect = (selectedIdx === q.correctIndex);
+
+            const chosenLetter = q.options[selectedIdx].letter;
+            userAnswers.push(`${chosenLetter} (${isCorrect ? "Correta" : "Incorreta"})`);
+
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correctIndex) {
+                    btn.classList.add('correct');
+                } else if (idx === selectedIdx && !isCorrect) {
+                    btn.classList.add('wrong');
+                }
+            });
+
+            if (isCorrect) {
+                score++;
+                feedback.className = 'feedback-box correct';
+                feedback.innerHTML = `<strong>✓ Resposta Correta!</strong><br>${q.explanation}`;
+            } else {
+                feedback.className = 'feedback-box wrong';
+                feedback.innerHTML = `<strong>✕ Resposta Incorreta.</strong><br>${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score-text').innerText = `Acertos: ${score}`;
+            document.getElementById('btn-next-question').style.display = 'inline-flex';
+        }
+
+        function nextQuestion() {
+            currentQuestionIdx++;
+            if (currentQuestionIdx < quizQuestions.length) {
+                loadQuestion(currentQuestionIdx);
+            } else {
+                showQuizResult();
+            }
+        }
+
+        async function showQuizResult() {
+            document.getElementById('quiz-container').style.display = 'none';
+            const resultCard = document.getElementById('quiz-result');
+            resultCard.style.display = 'block';
+
+            document.getElementById('final-score').innerText = `${score}/${quizQuestions.length}`;
+            const badge = document.getElementById('result-badge');
+            const title = document.getElementById('result-title');
+            const desc = document.getElementById('result-desc');
+
+            let badgeText = "";
+
+            if (score === 5) {
+                badgeText = "🏆 Mestre do PDI FACISC (100%)";
+                title.innerText = "Desempenho Impecável!";
+                desc.innerText = "Você domina todos os conceitos do PDI e está 100% preparado(a) para liderar sua evolução profissional na FACISC.";
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+                }
+            } else if (score >= 3) {
+                badgeText = "⭐ Excelente Aproveitamento";
+                title.innerText = "Muito Bom!";
+                desc.innerText = "Você compreendeu as diretrizes centrais do PDI. Aproveite a reunião 1:1 com sua liderança para aprofundar suas metas.";
+            } else {
+                badgeText = "🌱 Em Desenvolvimento";
+                title.innerText = "Primeiro Passo Concluído!";
+                desc.innerText = "O PDI é um processo contínuo de aprendizado. Conte com o apoio do RH e do seu líder para acelerar seu desenvolvimento.";
+            }
+
+            badge.innerText = badgeText;
+
+            // Enviar pontuação para a planilha oficial via ApiService
+            const syncStatusEl = document.getElementById('sync-status');
+            syncStatusEl.innerHTML = `<span>⏳ Gravando sua pontuação na planilha oficial...</span>`;
+
+            const dadosQuiz = {
+                colaborador: participanteNome,
+                cargo: participanteCargo,
+                pontuacao: score,
+                badge: badgeText,
+                respostas: userAnswers
+            };
+
+            const resultadoEnvio = await ApiService.enviarResultadoQuiz(dadosQuiz);
+
+            syncStatusEl.innerHTML = `<span>${resultadoEnvio.mensagem}</span>`;
+            showToast(resultadoEnvio.mensagem, resultadoEnvio.localOnly ? "warning" : "success");
+        }
+
+        function restartQuiz() {
+            document.getElementById('quiz-result').style.display = 'none';
+            document.getElementById('quiz-intro-card').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
