@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoavaliação do Colaborador • Projeto Crescer FACISC</title>
+    <meta http-equiv="refresh" content="6; url=index.html">
+    <title>Autoavaliação Impressa • Projeto Crescer FACISC</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,326 +34,57 @@
                 </svg>
             </a>
 
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">🏠 Início</a>
-                <a href="formulario.html" class="nav-link active">📝 Autoavaliação</a>
-                <a href="quiz.html" class="nav-link">🎮 Quiz Interativo</a>
-            </nav>
-
-            <div class="header-badge">✦ Projeto Crescer • PDI</div>
+            <div class="header-badge">✦ Projeto Crescer • PDI FACISC</div>
         </div>
     </header>
-
-    <!-- CABEÇALHO EXCLUSIVO DE IMPRESSÃO (PDF OFICIAL) -->
-    <div class="print-header-facisc print-only">
-        <div>
-            <h2 style="color: #08763C; margin: 0; font-size: 18pt;">FACISC • PROJETO CRESCER</h2>
-            <p style="margin: 0; font-size: 11pt; color: #555;">Formulário Oficial de Autoavaliação do Colaborador (PDI)</p>
-        </div>
-        <div style="text-align: right; font-size: 9pt; color: #666;">
-            Federação das Associações Empresariais de Santa Catarina
-        </div>
-    </div>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- BANNER TOPO -->
-        <section class="hero-banner no-print">
-            <div class="hero-tag">PLANO PRÁTICO • ETAPA 01</div>
-            <h1 class="hero-title">Autoavaliação do Colaborador</h1>
-            <p class="hero-subtitle">
-                Reflita com sinceridade sobre os seus 4 quadrantes de desenvolvimento e envie os dados para a planilha da liderança. Você também pode gerar o PDF oficial formatado para a reunião 1:1.
+        <section class="card" style="margin-top: 2rem; padding: 3rem 2rem; text-align: center;">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem;">📋</div>
+            <h1 class="hero-title" style="color: var(--dark-green); font-size: 1.8rem; margin-bottom: 0.8rem;">
+                Autoavaliação do Colaborador (Formato Impresso)
+            </h1>
+            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 620px; margin: 0 auto 1.8rem auto; line-height: 1.6;">
+                A etapa de Autoavaliação do PDI agora é realizada exclusivamente no <strong>formulário físico impresso</strong> entregue pela Gestão de Pessoas e pela sua Liderança direta.
             </p>
-        </section>
 
-        <!-- CARD 1: IDENTIFICAÇÃO -->
-        <section class="card">
-            <div class="card-header no-print">
-                <div class="card-icon">👤</div>
-                <div>
-                    <div class="card-title">1. Identificação do Colaborador</div>
-                    <div class="card-desc">Dados essenciais para formalização do ciclo de PDI</div>
-                </div>
+            <div class="card" style="background: var(--light-mint); border: 1px solid rgba(8, 118, 60, 0.25); max-width: 580px; margin: 0 auto 2rem auto; text-align: left;">
+                <h3 style="color: var(--dark-green); font-size: 1rem; font-weight: 700; margin-bottom: 6px;">
+                    📌 Orientações:
+                </h3>
+                <ul style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; padding-left: 1.2rem;">
+                    <li>Preencha sua ficha impressa (pontos fortes, oportunidades de melhoria e metas SMART).</li>
+                    <li>Leve sua ficha física para a sua reunião de alinhamento 1:1 com seu líder.</li>
+                    <li>Para participar da dinâmica ao vivo, utilize o <strong>Quiz Interativo do PDI</strong>!</li>
+                </ul>
             </div>
 
-            <div class="form-grid-2">
-                <div class="form-group">
-                    <label class="form-label" for="colab_nome">Nome Completo do Colaborador *</label>
-                    <input type="text" id="colab_nome" class="form-input" placeholder="Ex: Maria Silva" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="colab_cargo">Cargo / Área de Atuação *</label>
-                    <input type="text" id="colab_cargo" class="form-input" placeholder="Ex: Analista de Projetos • Regional Vale" required>
-                </div>
+            <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                    Acessar o Quiz Interativo 🚀
+                </a>
             </div>
 
-            <div class="form-grid-2">
-                <div class="form-group">
-                    <label class="form-label" for="colab_gestor">Nome do Gestor / Líder Direto</label>
-                    <input type="text" id="colab_gestor" class="form-input" placeholder="Ex: João Souza">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="colab_data">Data da Autoavaliação</label>
-                    <input type="date" id="colab_data" class="form-input">
-                </div>
-            </div>
-        </section>
-
-        <!-- CARD 2: OS 4 QUADRANTES -->
-        <section class="card">
-            <div class="card-header no-print">
-                <div class="card-icon blue">🎯</div>
-                <div>
-                    <div class="card-title">2. Os 4 Quadrantes do Desenvolvimento</div>
-                    <div class="card-desc">Mapeamento de competências, metas e suporte institucional</div>
-                </div>
-            </div>
-
-            <!-- Quadrante 1 -->
-            <div class="quadrant-box">
-                <div class="quadrant-title">1. PONTOS FORTES — O que você faz de melhor?</div>
-                <div class="form-helper">Identifique competências técnicas e comportamentais onde você gera grande impacto (Ex: Resolução de problemas, comunicação clara, análise técnica, foco em prazos).</div>
-                <textarea id="colab_fortes" class="form-textarea" placeholder="Descreva seus principais pontos fortes e momentos em que você se destacou na FACISC..."></textarea>
-            </div>
-
-            <!-- Quadrante 2 -->
-            <div class="quadrant-box blue-theme">
-                <div class="quadrant-title" style="color: var(--blue-corp);">2. OPORTUNIDADES — O que precisa ser aprimorado?</div>
-                <div class="form-helper">Habilidades ou conhecimentos que você quer e precisa desenvolver (Ex: Gestão do tempo, domínio de novas ferramentas, oratória/apresentações, visão estratégica).</div>
-                <textarea id="colab_oportunidades" class="form-textarea" placeholder="Descreva os conhecimentos ou atitudes que você deseja aperfeiçoar..."></textarea>
-            </div>
-
-            <!-- Quadrante 3 -->
-            <div class="quadrant-box">
-                <div class="quadrant-title">3. METAS DE CARREIRA (SMART) — Onde quer chegar nos próximos 12 meses?</div>
-                <div class="form-helper">Objetivos concretos, específicos e com prazo estabelecido (Ex: Assumir liderança técnica do projeto X até Dezembro; Concluir certificação Y no 1º semestre).</div>
-                <textarea id="colab_metas" class="form-textarea" placeholder="Escreva de 1 a 3 metas SMART para o seu plano anual..."></textarea>
-            </div>
-
-            <!-- Quadrante 4 -->
-            <div class="quadrant-box blue-theme">
-                <div class="quadrant-title" style="color: var(--blue-corp);">4. RECURSOS E APOIO — De qual suporte você necessita?</div>
-                <div class="form-helper">Selecione os apoios desejados e detalhe o que a liderança e a FACISC podem fornecer para viabilizar suas metas:</div>
-                
-                <div class="checkbox-group no-print">
-                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Cursos / Treinamentos"> 🎓 Cursos e Treinamentos</label>
-                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Mentoria Interna"> 🤝 Mentoria Interna</label>
-                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Tempo para Estudos"> ⏱️ Horas Semanais de Estudo</label>
-                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Novos Projetos"> 🚀 Participação em Novos Projetos</label>
-                    <label class="checkbox-chip"><input type="checkbox" name="apoio" value="Ferramentas / Softwares"> 💻 Novas Ferramentas</label>
-                </div>
-
-                <textarea id="colab_recursos" class="form-textarea" placeholder="Especifique detalhadamente os apoios e recursos necessários para o seu plano..."></textarea>
-            </div>
-
-            <!-- Assinaturas para Impressão (PDF) -->
-            <div class="print-signatures print-only">
-                <div class="sign-line">
-                    <strong>Assinatura do Colaborador</strong><br>
-                    <span id="print_sign_colab">Nome do Colaborador</span>
-                </div>
-                <div class="sign-line">
-                    <strong>Assinatura do Gestor</strong><br>
-                    <span id="print_sign_gestor">Nome do Gestor</span>
-                </div>
-            </div>
-
-            <!-- BARRA DE AÇÕES -->
-            <div class="actions-bar no-print">
-                <button id="btn-enviar-form" class="btn btn-primary" onclick="submeterFormulario()">
-                    <span>🚀</span> Enviar Autoavaliação
-                </button>
-                <button class="btn btn-secondary" onclick="exportToPDF()">
-                    <span>📄</span> Gerar / Salvar PDF Oficial
-                </button>
-                <button class="btn btn-outline" onclick="copyStructuredSummary()">
-                    <span>📋</span> Copiar p/ Teams / E-mail
-                </button>
-                <button class="btn btn-outline" onclick="downloadCSV()">
-                    <span>💾</span> Baixar CSV / Excel
-                </button>
-            </div>
-
+            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                Redirecionando automaticamente para o Quiz em alguns segundos...
+            </p>
         </section>
 
     </main>
 
     <!-- FOOTER INSTITUCIONAL -->
-    <footer class="no-print">
+    <footer>
         <div class="footer-container">
             <div>
                 <strong>FACISC</strong> • Federação das Associações Empresariais de Santa Catarina
             </div>
             <div>
-                <a href="quiz.html" class="footer-link">Ir para o Quiz Interativo →</a>
+                Projeto Crescer • Gestão de Pessoas & Cultura
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="config.js"></script>
-    <script src="api.js"></script>
-    <script>
-        const formFields = ['colab_nome', 'colab_cargo', 'colab_gestor', 'colab_data', 'colab_fortes', 'colab_oportunidades', 'colab_metas', 'colab_recursos'];
-
-        // Auto-salvamento em localStorage
-        function saveFormData() {
-            const data = {};
-            formFields.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) data[id] = el.value;
-            });
-            const checkboxes = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value);
-            data['apoios_selecionados'] = checkboxes;
-            localStorage.setItem('facisc_pdi_draft', JSON.stringify(data));
-        }
-
-        function loadFormData() {
-            // Data padrão: hoje
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('colab_data').value = today;
-
-            const saved = localStorage.getItem('facisc_pdi_draft');
-            if (!saved) return;
-
-            try {
-                const data = JSON.parse(saved);
-                formFields.forEach(id => {
-                    if (data[id]) document.getElementById(id).value = data[id];
-                });
-                if (data['apoios_selecionados']) {
-                    document.querySelectorAll('input[name="apoio"]').forEach(cb => {
-                        cb.checked = data['apoios_selecionados'].includes(cb.value);
-                    });
-                }
-            } catch(e) {}
-        }
-
-        // Submeter Autoavaliação
-        async function submeterFormulario() {
-            const nome = document.getElementById('colab_nome').value.trim();
-            const cargo = document.getElementById('colab_cargo').value.trim();
-
-            if (!nome || !cargo) {
-                showToast("Por favor, preencha seu Nome Completo e Cargo / Área.", "warning");
-                document.getElementById(!nome ? 'colab_nome' : 'colab_cargo').focus();
-                return;
-            }
-
-            const btn = document.getElementById('btn-enviar-form');
-            const originalText = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = `<span>⏳</span> Enviando dados...`;
-
-            const dados = {
-                colaborador: nome,
-                cargo: cargo,
-                gestor: document.getElementById('colab_gestor').value.trim(),
-                data: document.getElementById('colab_data').value,
-                pontos_fortes: document.getElementById('colab_fortes').value.trim(),
-                oportunidades: document.getElementById('colab_oportunidades').value.trim(),
-                metas: document.getElementById('colab_metas').value.trim(),
-                apoios: Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value),
-                recursos: document.getElementById('colab_recursos').value.trim()
-            };
-
-            const resultado = await ApiService.enviarAutoavaliacao(dados);
-
-            btn.disabled = false;
-            btn.innerHTML = originalText;
-
-            showToast(resultado.mensagem, resultado.localOnly ? "warning" : "success");
-        }
-
-        // Exportação em PDF Oficial
-        function exportToPDF() {
-            const nome = document.getElementById('colab_nome').value.trim() || "Colaborador";
-            const gestor = document.getElementById('colab_gestor').value.trim() || "Gestor Direto";
-            
-            document.getElementById('print_sign_colab').innerText = nome;
-            document.getElementById('print_sign_gestor').innerText = gestor;
-
-            window.print();
-        }
-
-        // Copiar Resumo Estruturado para Teams / E-mail
-        function copyStructuredSummary() {
-            const nome = document.getElementById('colab_nome').value.trim() || "Não informado";
-            const cargo = document.getElementById('colab_cargo').value.trim() || "Não informado";
-            const gestor = document.getElementById('colab_gestor').value.trim() || "Não informado";
-            const data = document.getElementById('colab_data').value || "Não informado";
-            const fortes = document.getElementById('colab_fortes').value.trim() || "Não preenchido";
-            const oportunidades = document.getElementById('colab_oportunidades').value.trim() || "Não preenchido";
-            const metas = document.getElementById('colab_metas').value.trim() || "Não preenchido";
-            const recursos = document.getElementById('colab_recursos').value.trim() || "Não preenchido";
-            
-            const apoios = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => `• ${cb.value}`).join('\n') || "Nenhum selecionado";
-
-            const summary = `📌 *PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI) • FACISC*
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-👤 *Colaborador:* ${nome}
-💼 *Cargo/Área:* ${cargo}
-🤝 *Gestor:* ${gestor}
-📅 *Data:* ${data}
-
-🎯 *1. PONTOS FORTES:*
-${fortes}
-
-🚀 *2. OPORTUNIDADES DE DESENVOLVIMENTO:*
-${oportunidades}
-
-🏆 *3. METAS DE CARREIRA (12 MESES):*
-${metas}
-
-🤝 *4. RECURSOS E APOIO NECESSÁRIO:*
-${apoios}
-${recursos}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-_Material preenchido para alinhamento na Reunião 1:1 do Projeto Crescer._`;
-
-            navigator.clipboard.writeText(summary).then(() => {
-                showToast("✓ Resumo copiado com sucesso! Pronto para colar no Teams ou e-mail.", "success");
-            }).catch(() => {
-                showToast("✕ Erro ao copiar automaticamente. Selecione o texto na tela.", "error");
-            });
-        }
-
-        // Exportar CSV
-        function downloadCSV() {
-            const nome = document.getElementById('colab_nome').value.trim() || "Colaborador";
-            const cargo = document.getElementById('colab_cargo').value.trim();
-            const gestor = document.getElementById('colab_gestor').value.trim();
-            const data = document.getElementById('colab_data').value;
-            const fortes = document.getElementById('colab_fortes').value.replace(/"/g, '""');
-            const oportunidades = document.getElementById('colab_oportunidades').value.replace(/"/g, '""');
-            const metas = document.getElementById('colab_metas').value.replace(/"/g, '""');
-            const recursos = document.getElementById('colab_recursos').value.replace(/"/g, '""');
-            const apoios = Array.from(document.querySelectorAll('input[name="apoio"]:checked')).map(cb => cb.value).join('; ');
-
-            const csvContent = "\uFEFFNome,Cargo,Gestor,Data,Pontos Fortes,Oportunidades,Metas SMART,Apoios Selecionados,Recursos e Detalhes\n" +
-                `"${nome}","${cargo}","${gestor}","${data}","${fortes}","${oportunidades}","${metas}","${apoios}","${recursos}"\n`;
-
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement("a");
-            const url = URL.createObjectURL(blob);
-            link.setAttribute("href", url);
-            link.setAttribute("download", `PDI_FACISC_${nome.replace(/\s+/g, '_')}.csv`);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            showToast("✓ Arquivo CSV exportado com sucesso!", "success");
-        }
-
-        // Listeners
-        window.addEventListener('DOMContentLoaded', () => {
-            loadFormData();
-            formFields.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('input', saveFormData);
-            });
-            document.querySelectorAll('input[name="apoio"]').forEach(cb => cb.addEventListener('change', saveFormData));
-        });
-    </script>
 </body>
 </html>

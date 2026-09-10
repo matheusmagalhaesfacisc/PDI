@@ -35,13 +35,7 @@
                 </svg>
             </a>
 
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">🏠 Início</a>
-                <a href="formulario.html" class="nav-link">📝 Autoavaliação</a>
-                <a href="quiz.html" class="nav-link active">🎮 Quiz Interativo</a>
-            </nav>
-
-            <div class="header-badge">✦ Desafio do Conhecimento</div>
+            <div class="header-badge">✦ Desafio do Conhecimento • PDI FACISC</div>
         </div>
     </header>
 
@@ -50,10 +44,10 @@
 
         <!-- BANNER TOPO -->
         <section class="hero-banner">
-            <div class="hero-tag">DINÂMICA AO VIVO • QUIZ DO PDI</div>
-            <h1 class="hero-title">Desafio do Conhecimento: Projeto Crescer</h1>
+            <div class="hero-tag">DINÂMICA AO VIVO • PROJETO CRESCER</div>
+            <h1 class="hero-title">Desafio do Conhecimento: PDI FACISC</h1>
             <p class="hero-subtitle">
-                Responda às 5 perguntas sobre Plano de Desenvolvimento Individual e descubra seu nível de protagonismo na carreira. Sua pontuação é gravada na planilha oficial do RH!
+                Responda às 5 perguntas sobre Plano de Desenvolvimento Individual e descubra seu nível de protagonismo na carreira. Sua pontuação é gravada automaticamente na planilha oficial do RH!
             </p>
         </section>
 
@@ -133,9 +127,22 @@
             </div>
 
             <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-secondary" onclick="restartQuiz()">🔄 Refazer Quiz</button>
-                <a href="formulario.html" class="btn btn-primary">📝 Ir para Autoavaliação →</a>
-                <a href="index.html" class="btn btn-outline">🏠 Voltar ao Portal</a>
+                <button class="btn btn-primary" onclick="restartQuiz()">🔄 Refazer o Quiz</button>
+            </div>
+
+            <!-- NOTA EXPLICATIVA SOBRE A AUTOAVALIAÇÃO IMPRESSA -->
+            <div class="card" style="margin-top: 2.2rem; background: var(--light-mint); border: 1px solid rgba(8, 118, 60, 0.25); text-align: left;">
+                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                    <div style="font-size: 2.2rem;">📄</div>
+                    <div style="flex: 1; min-width: 260px;">
+                        <h3 style="color: var(--dark-green); font-size: 1.08rem; font-weight: 700; margin-bottom: 4px;">
+                            Próxima Etapa: Autoavaliação do Colaborador (Formulário Impresso)
+                        </h3>
+                        <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.5; margin: 0;">
+                            A etapa de Autoavaliação do PDI será realizada no <strong>documento impresso oficial</strong> disponibilizado pelo RH e pela liderança. Preencha sua ficha impressa com seus pontos fortes, oportunidades e metas SMART para a sua reunião 1:1!
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -235,15 +242,10 @@
 
         // Inicialização
         window.addEventListener('DOMContentLoaded', () => {
-            // Recupera nome e cargo se já preencheu na autoavaliação
-            const draft = localStorage.getItem('facisc_pdi_draft');
-            if (draft) {
-                try {
-                    const data = JSON.parse(draft);
-                    if (data.colab_nome) document.getElementById('quiz_participante_nome').value = data.colab_nome;
-                    if (data.colab_cargo) document.getElementById('quiz_participante_cargo').value = data.colab_cargo;
-                } catch(e) {}
-            }
+            const salvoNome = localStorage.getItem('facisc_quiz_colab_nome');
+            const salvoCargo = localStorage.getItem('facisc_quiz_colab_cargo');
+            if (salvoNome) document.getElementById('quiz_participante_nome').value = salvoNome;
+            if (salvoCargo) document.getElementById('quiz_participante_cargo').value = salvoCargo;
         });
 
         function iniciarQuiz() {
@@ -258,6 +260,10 @@
 
             participanteNome = nomeInput;
             participanteCargo = cargoInput;
+
+            // Salva para facilidade em reexecuções
+            localStorage.setItem('facisc_quiz_colab_nome', participanteNome);
+            localStorage.setItem('facisc_quiz_colab_cargo', participanteCargo);
 
             document.getElementById('quiz-intro-card').style.display = 'none';
             document.getElementById('quiz-container').style.display = 'block';

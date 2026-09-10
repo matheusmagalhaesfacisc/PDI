@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Crescer • PDI FACISC</title>
+    <title>Desafio do Conhecimento • Quiz do PDI FACISC</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <!-- Estilos Oficiais FACISC -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,112 +35,113 @@
                 </svg>
             </a>
 
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link active">🏠 Início</a>
-                <a href="formulario.html" class="nav-link">📝 Autoavaliação</a>
-                <a href="quiz.html" class="nav-link">🎮 Quiz Interativo</a>
-            </nav>
-
-            <div class="header-badge">✦ Projeto Crescer • PDI</div>
+            <div class="header-badge">✦ Desafio do Conhecimento • PDI FACISC</div>
         </div>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
-        <!-- HERO BANNER -->
+        <!-- BANNER TOPO -->
         <section class="hero-banner">
-            <div class="hero-tag">✦ PROGRAMA INSTITUCIONAL DE DESENVOLVIMENTO</div>
-            <h1 class="hero-title">Projeto Crescer • PDI FACISC</h1>
+            <div class="hero-tag">DINÂMICA AO VIVO • PROJETO CRESCER</div>
+            <h1 class="hero-title">Desafio do Conhecimento: PDI FACISC</h1>
             <p class="hero-subtitle">
-                O Plano de Desenvolvimento Individual é a sua ferramenta estratégica para protagonizar sua evolução na FACISC. Mapeie suas metas, fortaleça competências e prepare seu alinhamento com a liderança.
+                Responda às 5 perguntas sobre Plano de Desenvolvimento Individual e descubra seu nível de protagonismo na carreira. Sua pontuação é gravada automaticamente na planilha oficial do RH!
             </p>
         </section>
 
-        <!-- PORTAL GRID: ACESSO DIRETO -->
-        <section class="portal-grid">
-            
-            <!-- CARD 1: FORMULÁRIO -->
-            <div class="portal-card">
-                <div class="portal-card-badge">ETAPA 01 • OBRIGATÓRIA</div>
-                <div class="portal-card-icon">📝</div>
-                <h2 class="portal-card-title">Autoavaliação do Colaborador</h2>
-                <p class="portal-card-text">
-                    Preencha os 4 quadrantes da sua trajetória profissional: pontos fortes, oportunidades de aprimoramento, metas SMART para 12 meses e suportes necessários da FACISC. Gere seu PDF oficial e envie direto para a liderança.
-                </p>
-                <a href="formulario.html" class="btn btn-primary">
-                    Acessar Autoavaliação →
-                </a>
+        <!-- ETAPA 0: IDENTIFICAÇÃO DO PARTICIPANTE -->
+        <section id="quiz-intro-card" class="card">
+            <div class="card-header">
+                <div class="card-icon">👤</div>
+                <div>
+                    <div class="card-title">Identificação do Participante</div>
+                    <div class="card-desc">Informe seus dados para registrar sua pontuação no ranking do Projeto Crescer</div>
+                </div>
             </div>
 
-            <!-- CARD 2: QUIZ -->
-            <div class="portal-card quiz-theme">
-                <div class="portal-card-badge">DINÂMICA DE FIXAÇÃO • AO VIVO</div>
-                <div class="portal-card-icon">🎮</div>
-                <h2 class="portal-card-title">Desafio do Conhecimento</h2>
-                <p class="portal-card-text">
-                    Participe do Quiz interativo de 5 perguntas. Teste seu domínio sobre as etapas do PDI, protagonismo de carreira, networking autêntico e soft skills, e conquiste seu distintivo de aproveitamento.
-                </p>
-                <a href="quiz.html" class="btn btn-secondary" style="border-color: var(--blue-corp); color: var(--blue-corp);">
-                    Iniciar Quiz Interativo →
-                </a>
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label class="form-label" for="quiz_participante_nome">Seu Nome Completo *</label>
+                    <input type="text" id="quiz_participante_nome" class="form-input" placeholder="Ex: Carlos Eduardo" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="quiz_participante_cargo">Cargo / Área de Atuação *</label>
+                    <input type="text" id="quiz_participante_cargo" class="form-input" placeholder="Ex: Coordenador de Soluções" required>
+                </div>
             </div>
 
-        </section>
-
-        <!-- CICLO DO PDI -->
-        <section>
-            <h2 class="cycle-section-title">
-                <span>🔄</span> As 4 Etapas do Ciclo do PDI
-            </h2>
-            <div class="cycle-grid">
-                
-                <div class="cycle-step-card">
-                    <div class="cycle-step-num">1</div>
-                    <div class="cycle-step-title">Autoavaliação</div>
-                    <div class="cycle-step-desc">
-                        O colaborador reflete sobre suas competências técnicas, comportamentais e aspirações profissionais.
-                    </div>
-                </div>
-
-                <div class="cycle-step-card">
-                    <div class="cycle-step-num">2</div>
-                    <div class="cycle-step-title">Alinhamento 1:1</div>
-                    <div class="cycle-step-desc">
-                        Reunião empática e colaborativa com o gestor direto para harmonizar expectativas e prioridades.
-                    </div>
-                </div>
-
-                <div class="cycle-step-card">
-                    <div class="cycle-step-num">3</div>
-                    <div class="cycle-step-title">Metas SMART</div>
-                    <div class="cycle-step-desc">
-                        Construção de objetivos específicos, mensuráveis, atingíveis, relevantes e com prazo estabelecido.
-                    </div>
-                </div>
-
-                <div class="cycle-step-card">
-                    <div class="cycle-step-num">4</div>
-                    <div class="cycle-step-title">Acompanhamento</div>
-                    <div class="cycle-step-desc">
-                        Check-ins periódicos para revisar o progresso, ajustar rotas e celebrar conquistas na FACISC.
-                    </div>
-                </div>
-
+            <div style="margin-top: 0.5rem; display: flex; justify-content: flex-end;">
+                <button class="btn btn-primary" onclick="iniciarQuiz()">
+                    Começar o Desafio 🚀
+                </button>
             </div>
         </section>
 
-        <!-- SUPORTE DO RH -->
-        <section class="card" style="background: var(--light-mint); border-color: rgba(8, 118, 60, 0.25);">
-            <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                <div style="font-size: 2.2rem;">🤝</div>
-                <div style="flex: 1; min-width: 260px;">
-                    <h3 style="color: var(--dark-green); font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">
-                        Apoio da Gestão de Pessoas / RH FACISC
-                    </h3>
-                    <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.5;">
-                        Dúvidas sobre o preenchimento, definição de metas ou condução das reuniões 1:1? Conte com o suporte do time de Recursos Humanos da federação em cada passo do seu desenvolvimento.
-                    </p>
+        <!-- ETAPA 1 A 5: PERGUNTAS DO QUIZ -->
+        <section id="quiz-container" style="display: none;">
+            <!-- Progresso -->
+            <div class="quiz-progress-wrap">
+                <div class="quiz-progress-meta">
+                    <span id="quiz-step-text">Pergunta 1 de 5</span>
+                    <span id="quiz-score-text">Acertos: 0</span>
+                </div>
+                <div class="quiz-progress-bar">
+                    <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Pergunta Atual -->
+            <div class="question-card">
+                <div id="q-category" class="question-number">Pergunta 1</div>
+                <h2 id="q-text" class="question-text">Pergunta...</h2>
+                <div id="q-options" class="options-list">
+                    <!-- Opções geradas via JS -->
+                </div>
+                <div id="q-feedback" class="feedback-box">
+                    <!-- Feedback gerado via JS -->
+                </div>
+                <div class="quiz-actions">
+                    <button id="btn-next-question" class="btn btn-primary" style="display: none;" onclick="nextQuestion()">
+                        Próxima Pergunta →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ETAPA FINAL: RESULTADO DO QUIZ -->
+        <section id="quiz-result" class="card quiz-result-card" style="display: none;">
+            <div class="score-circle">
+                <div id="final-score" class="score-number">5/5</div>
+                <div class="score-label">Pontuação</div>
+            </div>
+            <div id="result-badge" class="result-badge">🏆 Especialista em PDI FACISC</div>
+            <h2 id="result-title" class="hero-title" style="color: var(--dark-green); margin-bottom: 0.5rem;">Parabéns pelo Desempenho!</h2>
+            <p id="result-desc" class="card-desc" style="max-width: 600px; margin: 0 auto 1.5rem auto; font-size: 1rem;">
+                Você compreendeu perfeitamente as etapas do PDI e o papel fundamental de protagonizar a sua própria trajetória na FACISC.
+            </p>
+
+            <div id="sync-status" style="margin-bottom: 1.8rem; font-size: 0.9rem; color: var(--facisc-green); font-weight: 600;">
+                <span>⏳ Gravando sua pontuação na planilha oficial...</span>
+            </div>
+
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="restartQuiz()">🔄 Refazer o Quiz</button>
+            </div>
+
+            <!-- NOTA EXPLICATIVA SOBRE A AUTOAVALIAÇÃO IMPRESSA -->
+            <div class="card" style="margin-top: 2.2rem; background: var(--light-mint); border: 1px solid rgba(8, 118, 60, 0.25); text-align: left;">
+                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                    <div style="font-size: 2.2rem;">📄</div>
+                    <div style="flex: 1; min-width: 260px;">
+                        <h3 style="color: var(--dark-green); font-size: 1.08rem; font-weight: 700; margin-bottom: 4px;">
+                            Próxima Etapa: Autoavaliação do Colaborador (Formulário Impresso)
+                        </h3>
+                        <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.5; margin: 0;">
+                            A etapa de Autoavaliação do PDI será realizada no <strong>documento impresso oficial</strong> disponibilizado pelo RH e pela liderança. Preencha sua ficha impressa com seus pontos fortes, oportunidades e metas SMART para a sua reunião 1:1!
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,5 +160,244 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script>
+        // Dados oficiais do Quiz (do documento Dinâmica - Quiz.docx)
+        const quizQuestions = [
+            {
+                number: 1,
+                category: "PROTAGONISMO NO PDI",
+                question: "Qual é a principal responsabilidade do colaborador no processo do Plano de Desenvolvimento Individual (PDI)?",
+                options: [
+                    { letter: "A", text: "Aguardar o gestor definir todas as suas metas." },
+                    { letter: "B", text: "Delegar ao RH a escolha dos seus cursos e prazos." },
+                    { letter: "C", text: "Realizar reuniões de alinhamento apenas no final do ano." },
+                    { letter: "D", text: "Protagonizar e executar o plano ativamente." }
+                ],
+                correctIndex: 3, // D
+                explanation: "Exato! O PDI é de propriedade do colaborador. Embora a liderança dê suporte e mentoria, é você quem protagoniza e executa suas ações de desenvolvimento."
+            },
+            {
+                number: 2,
+                category: "CICLO DO PROCESSO",
+                question: "Quais são as 4 etapas essenciais do ciclo do PDI?",
+                options: [
+                    { letter: "A", text: "Autoavaliação, Alinhamento 1:1, Metas SMART e Acompanhamento." },
+                    { letter: "B", text: "Simplicidade, Metas SMART, Cobrança e Finalização." },
+                    { letter: "C", text: "Sustentabilidade, Autoavaliação, Alinhamento 1:1 e Reajuste." },
+                    { letter: "D", text: "Sistemática, Treinamento, Reunião de Área e Feedback." }
+                ],
+                correctIndex: 0, // A
+                explanation: "Correto! O fluxo contínuo do PDI é: 1. Autoavaliação → 2. Reunião 1:1 com líder → 3. Definição de Metas SMART → 4. Acompanhamento periódico."
+            },
+            {
+                number: 3,
+                category: "GESTÃO DE CARREIRA",
+                question: "O que caracteriza a prática de networking estratégico na gestão de carreira?",
+                options: [
+                    { letter: "A", text: "Adicionar pessoas de uma mesma empresa sem interação." },
+                    { letter: "B", text: "Construir relações autênticas, de confiança e suporte mútuo." },
+                    { letter: "C", text: "Colecionar contatos apenas para pedir favores quando precisar." },
+                    { letter: "D", text: "Trocar de cargo com frequência para conhecer novas áreas." }
+                ],
+                correctIndex: 1, // B
+                explanation: "Perfeito! Networking verdadeiro não é sobre quantidade de contatos vazios, mas sobre cultivar relações autênticas e de colaboração mútua no ecossistema FACISC."
+            },
+            {
+                number: 4,
+                category: "DESENVOLVIMENTO CONTÍNUO",
+                question: "Qual das alternativas reflete a mentalidade ideal para o desenvolvimento profissional contínuo?",
+                options: [
+                    { letter: "A", text: "Fazer apenas os treinamentos obrigatórios exigidos pela empresa." },
+                    { letter: "B", text: "Concluir a graduação e considerar os estudos finalizados." },
+                    { letter: "C", text: "Buscar aprender apenas quando houver promessa de promoção imediata." },
+                    { letter: "D", text: "Buscar aprendizado contínuo, constante e autodirigido (Lifelong Learning)." }
+                ],
+                correctIndex: 3, // D
+                explanation: "Excelente! O desenvolvimento é um processo contínuo ao longo de toda a vida profissional (Lifelong Learning), expandindo horizontes e gerando valor constante."
+            },
+            {
+                number: 5,
+                category: "COMPETÊNCIAS PROFISSIONAIS",
+                question: "O que diferencia as competências técnicas (Hard Skills) das competências comportamentais (Soft Skills)?",
+                options: [
+                    { letter: "A", text: "Técnicas são avaliadas no PDI; comportamentais não entram no plano." },
+                    { letter: "B", text: "Técnicas servem para líderes; comportamentais servem apenas para analistas." },
+                    { letter: "C", text: "Técnicas são ligadas a conhecimentos mensuráveis e operacionais; comportamentais referem-se a atitudes e relações interpessoais." },
+                    { letter: "D", text: "Técnicas são fáceis de esquecer; comportamentais mudam diariamente." }
+                ],
+                correctIndex: 2, // C
+                explanation: "Muito bem! Hard skills são os conhecimentos técnicos específicos (ex: Excel, gestão financeira, processos), enquanto Soft skills são atitudes, inteligência emocional e comunicação assertiva."
+            }
+        ];
+
+        let currentQuestionIdx = 0;
+        let score = 0;
+        let answered = false;
+        let userAnswers = [];
+        let participanteNome = "";
+        let participanteCargo = "";
+
+        // Inicialização
+        window.addEventListener('DOMContentLoaded', () => {
+            const salvoNome = localStorage.getItem('facisc_quiz_colab_nome');
+            const salvoCargo = localStorage.getItem('facisc_quiz_colab_cargo');
+            if (salvoNome) document.getElementById('quiz_participante_nome').value = salvoNome;
+            if (salvoCargo) document.getElementById('quiz_participante_cargo').value = salvoCargo;
+        });
+
+        function iniciarQuiz() {
+            const nomeInput = document.getElementById('quiz_participante_nome').value.trim();
+            const cargoInput = document.getElementById('quiz_participante_cargo').value.trim();
+
+            if (!nomeInput || !cargoInput) {
+                showToast("Por favor, preencha seu Nome e Cargo / Área para iniciar.", "warning");
+                document.getElementById(!nomeInput ? 'quiz_participante_nome' : 'quiz_participante_cargo').focus();
+                return;
+            }
+
+            participanteNome = nomeInput;
+            participanteCargo = cargoInput;
+
+            // Salva para facilidade em reexecuções
+            localStorage.setItem('facisc_quiz_colab_nome', participanteNome);
+            localStorage.setItem('facisc_quiz_colab_cargo', participanteCargo);
+
+            document.getElementById('quiz-intro-card').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+
+            currentQuestionIdx = 0;
+            score = 0;
+            userAnswers = [];
+            loadQuestion(0);
+        }
+
+        function loadQuestion(idx) {
+            const q = quizQuestions[idx];
+            answered = false;
+
+            document.getElementById('q-category').innerText = `ETAPA ${idx + 1} • ${q.category}`;
+            document.getElementById('q-text').innerText = q.question;
+            document.getElementById('quiz-step-text').innerText = `Pergunta ${idx + 1} de ${quizQuestions.length}`;
+            document.getElementById('quiz-score-text').innerText = `Acertos: ${score}`;
+            document.getElementById('quiz-progress-fill').style.width = `${((idx) / quizQuestions.length) * 100}%`;
+
+            const optionsContainer = document.getElementById('q-options');
+            optionsContainer.innerHTML = '';
+
+            const feedback = document.getElementById('q-feedback');
+            feedback.style.display = 'none';
+            feedback.className = 'feedback-box';
+
+            document.getElementById('btn-next-question').style.display = 'none';
+
+            q.options.forEach((opt, oIdx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `<span class="option-letter">${opt.letter}</span> <span>${opt.text}</span>`;
+                btn.onclick = () => selectOption(oIdx);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(selectedIdx) {
+            if (answered) return;
+            answered = true;
+
+            const q = quizQuestions[currentQuestionIdx];
+            const buttons = document.querySelectorAll('.option-btn');
+            const feedback = document.getElementById('q-feedback');
+            const isCorrect = (selectedIdx === q.correctIndex);
+
+            const chosenLetter = q.options[selectedIdx].letter;
+            userAnswers.push(`${chosenLetter} (${isCorrect ? "Correta" : "Incorreta"})`);
+
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correctIndex) {
+                    btn.classList.add('correct');
+                } else if (idx === selectedIdx && !isCorrect) {
+                    btn.classList.add('wrong');
+                }
+            });
+
+            if (isCorrect) {
+                score++;
+                feedback.className = 'feedback-box correct';
+                feedback.innerHTML = `<strong>✓ Resposta Correta!</strong><br>${q.explanation}`;
+            } else {
+                feedback.className = 'feedback-box wrong';
+                feedback.innerHTML = `<strong>✕ Resposta Incorreta.</strong><br>${q.explanation}`;
+            }
+
+            document.getElementById('quiz-score-text').innerText = `Acertos: ${score}`;
+            document.getElementById('btn-next-question').style.display = 'inline-flex';
+        }
+
+        function nextQuestion() {
+            currentQuestionIdx++;
+            if (currentQuestionIdx < quizQuestions.length) {
+                loadQuestion(currentQuestionIdx);
+            } else {
+                showQuizResult();
+            }
+        }
+
+        async function showQuizResult() {
+            document.getElementById('quiz-container').style.display = 'none';
+            const resultCard = document.getElementById('quiz-result');
+            resultCard.style.display = 'block';
+
+            document.getElementById('final-score').innerText = `${score}/${quizQuestions.length}`;
+            const badge = document.getElementById('result-badge');
+            const title = document.getElementById('result-title');
+            const desc = document.getElementById('result-desc');
+
+            let badgeText = "";
+
+            if (score === 5) {
+                badgeText = "🏆 Mestre do PDI FACISC (100%)";
+                title.innerText = "Desempenho Impecável!";
+                desc.innerText = "Você domina todos os conceitos do PDI e está 100% preparado(a) para liderar sua evolução profissional na FACISC.";
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+                }
+            } else if (score >= 3) {
+                badgeText = "⭐ Excelente Aproveitamento";
+                title.innerText = "Muito Bom!";
+                desc.innerText = "Você compreendeu as diretrizes centrais do PDI. Aproveite a reunião 1:1 com sua liderança para aprofundar suas metas.";
+            } else {
+                badgeText = "🌱 Em Desenvolvimento";
+                title.innerText = "Primeiro Passo Concluído!";
+                desc.innerText = "O PDI é um processo contínuo de aprendizado. Conte com o apoio do RH e do seu líder para acelerar seu desenvolvimento.";
+            }
+
+            badge.innerText = badgeText;
+
+            // Enviar pontuação para a planilha oficial via ApiService
+            const syncStatusEl = document.getElementById('sync-status');
+            syncStatusEl.innerHTML = `<span>⏳ Gravando sua pontuação na planilha oficial...</span>`;
+
+            const dadosQuiz = {
+                colaborador: participanteNome,
+                cargo: participanteCargo,
+                pontuacao: score,
+                badge: badgeText,
+                respostas: userAnswers
+            };
+
+            const resultadoEnvio = await ApiService.enviarResultadoQuiz(dadosQuiz);
+
+            syncStatusEl.innerHTML = `<span>${resultadoEnvio.mensagem}</span>`;
+            showToast(resultadoEnvio.mensagem, resultadoEnvio.localOnly ? "warning" : "success");
+        }
+
+        function restartQuiz() {
+            document.getElementById('quiz-result').style.display = 'none';
+            document.getElementById('quiz-intro-card').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
